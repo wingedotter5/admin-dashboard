@@ -1,9 +1,12 @@
 :root {
   --sidebar-background: #1992d4;
+  --container-columns: 6;
+  --container-rows: 4;
 }
 
 html, body {
   height: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -16,26 +19,49 @@ html, body {
   height: 100%;
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(var(--container-columns), 1fr);
+  grid-template-rows: repeat(var(--container-rows), 1fr);
 
 }
 
 .container > header {
   background-color: aqua;
 
-  grid-column: 2 / 6;
+  grid-column: 2 / calc(var(--container-columns) + 1);
 }
 
 .container > main {
   background-color: cornflowerblue;
 
-  grid-column: 2 / 6;
-  grid-row: 2 / 6;
+  grid-column: 2 / calc(var(--container-columns) + 1);
+  grid-row: 2 / calc(var(--container-columns) + 1);
 }
 
 .container > #sidebar {
+  color: white;
   background-color: var(--sidebar-background);
 
-  grid-row: 1 / 6;
+  grid-row: 1 / calc(var(--container-columns) + 1);
+
+  padding: 24px;
+
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 30px;
+}
+
+.container > #sidebar > * {
+  align-self: start;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 24px 24px 0;
+  cursor: pointer;
+}
+
+.brand {
+  margin: 0;
 }
