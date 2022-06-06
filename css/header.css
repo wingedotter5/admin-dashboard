@@ -4,6 +4,8 @@
   background-color: white;
 }
 
+/* header-top */
+
 #header-top {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -40,4 +42,45 @@
 
 #user-actions > span {
   font-weight: bold;
+}
+
+/* header-bottom */
+
+#header-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 16px 48px;
+}
+
+#header-bottom #welcome {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+#header-bottom #welcome #welcome-message div:first-child {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#header-bottom #welcome #welcome-message div:last-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#header-bottom #action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+#header-bottom #action-buttons > button {
+  font-size: 18px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  background-color: var(--sidebar-background);
+  padding:  8px 16px;
 }
