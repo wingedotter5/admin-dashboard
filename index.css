@@ -1,5 +1,6 @@
 :root {
   --sidebar-background: #1992d4;
+  --main-background: #e2e8f0;
   --container-columns: 6;
   --container-rows: 4;
 }
@@ -21,5 +22,5 @@ html, body {
   display: grid;
   grid-template-columns: repeat(var(--container-columns), 1fr);
   grid-template-rows: repeat(var(--container-rows), 1fr);
-
+  background-color: var(--main-background);
 }

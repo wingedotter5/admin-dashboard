@@ -1,4 +1,6 @@
 .container > main {
   grid-column: 2 / calc(var(--container-columns) + 1);
   grid-row: 2 / calc(var(--container-columns) + 1);
+
+  background-color: transparent;
 }
